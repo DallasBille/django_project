@@ -25,7 +25,7 @@ from first_app import views
 # Import the view then call the index method(outputs "Hello World")
 
 urlpatterns = [
-    url(r'^$',views.index,name='index'),
+    url(r'^$',views.index,name='index.html'),
     url(r'^first_app/',include('first_app.urls')),
     path('admin/', admin.site.urls),
 ]
