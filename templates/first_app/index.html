@@ -3,10 +3,29 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static "css/style.css"}">
         <title></title>
     </head>
     <body>
-        <h1>This is just the beginning of the greatest python app known to man.</h1>
+        <h1>Welcome to Django Level Two, here are your access records</h1>
         <img src="{% static "images/db.ico"%}" alt="">
+        <div class="djangotwo">
+            {% if access_records %}
+            <table>
+                <thead>
+                    <th>Site Name</th>
+                    <th>Date Accessed</th>
+                </thead>
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name}}</td>
+                    <td>{{ acc.date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No Access Records Found</p>
+            {% endif %}
+        </div>
     </body>
 </html>
