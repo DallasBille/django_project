@@ -30,6 +30,12 @@ class AccessRecord(models.Model):
     def __str__(self):
         return str(self.date)
 
+class Users(models.Model):
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=20)
+    email = models.EmailField(max_length=20, unique=True)
+
+    
 
 
 # Store application data Models, Relationships etc.

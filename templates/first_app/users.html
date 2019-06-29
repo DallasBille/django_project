@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        {% for user in users %}
+        <h1>User</h1>
+        <p>{{user.first_name}}</p>
+        <p>{{user.last_name}}</p>
+        <p>{{user.email}}</p>
+
+        {% endfor %}
+
+
+    </body>
+</html>
